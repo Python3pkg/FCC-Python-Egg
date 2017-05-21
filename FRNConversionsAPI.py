@@ -1,5 +1,5 @@
-from generic_api import *
-import urllib,json
+from .generic_api import *
+import urllib.request, urllib.parse, urllib.error,json
 
 
 # Simple Python wrapper around the Broadband API provided by the FCC.
@@ -32,14 +32,14 @@ if __name__ == "__main__":
   bb = FRNConversionsAPI()
 
   x=bb.getList(stateCode='IL')
-  print type(x)
-  print len(x)
-  print x.keys()
+  print(type(x))
+  print(len(x))
+  print(list(x.keys()))
 
   #print x
   
-  print
+  print()
   x=bb.getInfo(frn='0017855545')
-  print type(x)
-  print len(x)
-  print x
+  print(type(x))
+  print(len(x))
+  print(x)

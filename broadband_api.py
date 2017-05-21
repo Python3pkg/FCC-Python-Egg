@@ -1,4 +1,4 @@
-from generic_api import *
+from .generic_api import *
 
 # Simple Python wrapper around the Broadband API provided by the FCC.
 
@@ -12,4 +12,4 @@ class BroadbandApi(GenericAPI):
 # Sample use of BroadbandApi
 if __name__ == "__main__":
   bb = BroadbandApi()
-  print bb.get_data(latitude=37, longitude=-122) # (Should be San Francisco)
+  print(bb.get_data(latitude=37, longitude=-122)) # (Should be San Francisco)
